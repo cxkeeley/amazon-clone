@@ -16,8 +16,8 @@ const Home = () => {
         <div className='home__row'>
           <Product
             id='12321341'
-            title='The lean startup'
-            price={29.99}
+            title='The Lean Startup: How Constant Innovation Creates Radically Successful Businesses Paperback'
+            price={11.96}
             rating={5}
             image='https://images-na.ssl-images-amazon.com/images/I/51Zymoq7UnL._AC_SY400_.jpg'
           />

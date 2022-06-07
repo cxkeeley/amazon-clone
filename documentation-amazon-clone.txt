@@ -109,12 +109,59 @@ npm ERR! to accept an incorrect (and potentially broken) dependency resolution.
 
 --------------------------------------------------------
 
+⭐ Making the product dynamically
+✅ making file Product.js
+✅ add import Product from './Product';
+✅ render <Product /> at Home.js
+✅ making a callback function at product.JS
+✅ const Product = ({ id, title, image, price, rating }) => {}
+✅ <p>{title}</p>
+✅ <div className='product__rating'>
+          {Array(rating)
+            .fill()
+            .map((_, i) => (
+              <p>⭐</p>
+            ))}
+        </div>
 
 --------------------------------------------------------
 
+⭐ working at the checkout cart
+✅ we will need to install react-router-dom
+✅ npm install react-router-dom
+
+✅ go to App.js
+✅ add import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+✅ wrap all the apps in <Router> and <Routes>
 
 --------------------------------------------------------
 
+Few Updates :-
+
+1) As per the new updated Firebase we must import Firebase as follows (firebase.js file):
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/auth';
+import 'firebase/compat/firestore';
+
+2) useHistory is updated as useNavigate
+import { Link, useNavigate } from 'react-router-dom'
+const navigate = useNavigate ();
+navigate('/')
+
+3) <Switch> is deprecated in the lastest version of React instead use <Routes>
+import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
+<Router>
+      <div className="app">
+        <Routes>
+          <Route path = "/" element={[<Header />, <Home />]} />
+          <Route path="/checkout" element={<Header />, <Checkout />} />
+          <Route path = "/login" element={<Login />} />
+        </Routes>
+      </div>
+    </Router>
+
+4) Use this instead of history.replace
+navigate('/orders', { replace: true });
 
 --------------------------------------------------------
 
