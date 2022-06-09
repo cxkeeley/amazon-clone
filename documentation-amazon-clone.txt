@@ -165,6 +165,11 @@ navigate('/orders', { replace: true });
 
 --------------------------------------------------------
 
+⭐ working with checkoutproduct.js
+✅ this is a props use in checkout product
+const CheckoutProduct = ({id, image, title, price, rating }) => {}
+
+⭐ working with checkout.js
 
 --------------------------------------------------------
 
