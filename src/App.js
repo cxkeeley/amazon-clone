@@ -12,6 +12,9 @@ function App() {
     <Router>
       <div className='app'>
         <Routes>
+          <Route path='/login'>
+            <h1>This is login page</h1>
+          </Route>
           <Route path='/' element={[<Header />, <Home />]} />
           <Route path='/checkout' element={[<Header />, <Checkout />]} />
         </Routes>
