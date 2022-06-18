@@ -5,6 +5,7 @@ import Header from './Header';
 import Home from './Home';
 import Checkout from './Checkout';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Login from './Login';
 
 function App() {
   return (
@@ -12,9 +13,7 @@ function App() {
     <Router>
       <div className='app'>
         <Routes>
-          <Route path='/login'>
-            <h1>This is login page</h1>
-          </Route>
+          <Route path='/login' element={[<Login />]} />
           <Route path='/' element={[<Header />, <Home />]} />
           <Route path='/checkout' element={[<Header />, <Checkout />]} />
         </Routes>
